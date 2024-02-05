@@ -1,8 +1,7 @@
 import cv2
 import numpy as np
-from pyzbar.pyzbar import decode
 from Logger import logger
-from math import fabs, sin, radians, cos, isclose
+from math import fabs, sin, radians, cos
 
 class Preprocessor:
     def __init__(self, image_path):
@@ -156,8 +155,8 @@ class Replacer:
 
         # Use the mask to blend the QR code into the original image
         for c in range(0, 3):
-            original_img[y_adjusted:y_adjusted+h_scaled, x_adjusted:x_adjusted+w_scaled, c] = (
-                original_img[y_adjusted:y_adjusted+h_scaled, x_adjusted:x_adjusted+w_scaled, c] * (1 - mask / 255.0) +
+            original_img[y_adjusted : y_adjusted + h_scaled, x_adjusted : x_adjusted + w_scaled, c] = (
+                original_img[y_adjusted : y_adjusted + h_scaled, x_adjusted : x_adjusted + w_scaled, c] * (1 - mask / 255.0) +
                 qr_img_resized[:, :, c] * (mask / 255.0)
             )
         
