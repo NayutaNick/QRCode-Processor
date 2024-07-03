@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from Logger import logger
+from logger import logger
 from math import fabs, sin, radians, cos
 
 class Preprocessor:
@@ -67,7 +67,7 @@ class Detector:
         """
         data, points, _ = self.detector.detectAndDecode(img)
         if points is not None:
-            logger.info(f"二维码占位符解码结果: {data}; 角点坐标为: {points}")
+            logger.info(f"二维码占位符解码结果: {data}; 角点坐标为:\n {points}")
             return points[0].reshape(-1, 2).astype(int)
         else:
             logger.error(f"找不到二维码占位符")

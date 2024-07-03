@@ -25,7 +25,7 @@
 
 ## 文件结构
 
-- `Logger.py`：定义了日志记录功能，用于记录程序的运行情况。
+- `logger.py`：定义了日志记录功能，用于记录程序的运行情况。
 - `original_poster.png`：示例原始海报图片，包含二维码占位符。
 - `placeholder_qrcode.png`：示例占位符QR码图像。
 - `qr_code_detector.py`：主要的脚本文件，包含 `Preprocessor`、`Detector` 和 `Replacer` 类以及 `main` 函数。
@@ -41,14 +41,14 @@
 确保您已经安装了所有必需的 Python 库。可以使用以下命令安装缺失的库：
 
 ```bash
-pip install numpy opencv
+pip install numpy opencv-python
 ```
 
 ## 使用说明
 
 1. 将您的原始海报（一定是有一张二维码的）和您想要替换的二维码图像保存在本地。
     > 可以修改 `main` 函数中的 `image_path` 和 `qrcode_path` 变量，以从指向本地文件更改为指向一个url。
-2. 确保 `Logger.py` 正确配置。
+2. 确保 `logger.py` 正确配置。
 3. 运行 `qr_code_detector.py`（或作为包导入，调用 `qr_code_detector.main`）。
 
 脚本执行后，输出图像将保存在脚本的运行目录下，文件名为 `output.png`。
@@ -64,9 +64,9 @@ pip install numpy opencv
 
 ### Logger.py
 
-一个日志记录器，稍微根据个人习惯将 `Logging` 库优化了一下。日志保存在 `./Logs` 文件夹中，唯一日志文件是 `log.log`
+一个日志记录器，稍微根据个人习惯将 `logging` 库优化了一下。日志保存在 `./logs` 文件夹中，唯一日志文件是 `log.log`
 
-可以针对项目需求进行调整、或直接改用 `Logging`。
+可以针对项目需求进行调整、或直接改用 `logging`。
 
 ## 注意事项
 
