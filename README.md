@@ -36,6 +36,11 @@
 - `output.png`：脚本处理后输出的图片。
 - `logs`：目录，存放日志文件。
 
+`qrcode_detector.py` 的 UML 类图如下：
+
+<img width="703" alt="UML" src="https://github.com/NayutaNick/QRCode-Processor/assets/117813317/7c1727f8-800a-467d-b245-8548ee6be431">
+
+
 ## 安装指南
 
 确保您已经安装了所有必需的 Python 库。可以使用以下命令安装缺失的库：
